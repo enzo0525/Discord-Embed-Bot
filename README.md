@@ -1,6 +1,8 @@
 # Discord Embed Bot
 
-The Discord Embed Bot is designed to fix embed links from various platforms on Discord, including Twitter, Instagram, Reddit, and TikTok. Follow these simple steps to set up and use the bot:
+The Discord Embed Bot is designed to fix embed links from various platforms on Discord, including Twitter, Instagram, Reddit, and TikTok. 
+
+Follow these simple steps to set up and use the bot:
 
 ### Requirements:
 ```
