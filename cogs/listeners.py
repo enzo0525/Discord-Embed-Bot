@@ -17,11 +17,11 @@ class Listener(commands.Cog):
             return
 
         for prefix, fixed in self.mapping_links.items():
-            if message.content.startswith(prefix):
+            if prefix in message.content:
                 temp = message.content.split(prefix)
                 new_link = fixed + temp[1]
                 await message.delete()
-                await message.channel.send(new_link)
+                await message.channel.send(f'{temp[0]}\n**Source:** {message.author.mention}\n{new_link}')
                 return
 
 def setup(bot):
