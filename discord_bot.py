@@ -6,7 +6,7 @@ import os
 intents = nextcord.Intents.default()
 intents.message_content = True
 intents.members = True
-bot = commands.Bot(intents=intents)
+bot = commands.Bot(command_prefix='!', intents=intents)
 
 for fn in os.listdir('cogs'):
     if fn.endswith('.py'):
