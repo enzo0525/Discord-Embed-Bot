@@ -23,6 +23,15 @@ class Listener(commands.Cog):
                 await message.delete()
                 await message.channel.send(f'{temp[0]}\n**Source:** {message.author.mention}\n{new_link}')
                 return
+            
+    @commands.command()
+    async def delete(self, ctx):
+        async for message in ctx.channel.history(limit=50):
+            if (f'@{ctx.author.id}') in message.content and message.author.id == self.bot.user.id:
+                await message.delete()
+                await ctx.send('>>> Message deleted.')
+                return
+        await ctx.send('>>> Could not find message or message is too old.')
 
 def setup(bot):
     bot.add_cog(Listener(bot))
