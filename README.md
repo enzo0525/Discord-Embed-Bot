@@ -20,9 +20,9 @@ pip install -r requirements.txt
 2. **Configure Environment Variables:**
    - Create a `.env` file in the project root directory.
    - Add your bot token to the file like this:
-     ```
-     BOT_TOKEN=your_token_here
-     ```
+```
+BOT_TOKEN=your_token_here
+```
 
 ### Usage:
 
