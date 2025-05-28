@@ -1,7 +1,9 @@
 from nextcord.ext import commands
+from dotenv import load_dotenv
 import nextcord
-import creds
 import os
+
+load_dotenv()
 
 intents = nextcord.Intents.default()
 intents.message_content = True
@@ -16,4 +18,4 @@ for fn in os.listdir('cogs'):
 async def on_ready():
     print(f'Logged in as {bot.user.name}')
 
-bot.run(creds.BOT_TOKEN)
+bot.run(os.getenv('BOT_TOKEN'))
