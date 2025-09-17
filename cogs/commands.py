@@ -13,8 +13,9 @@ class Commands(commands.Cog):
         async for message in channel.history():
             if message.author == self.bot.user:
                 continue
-            elif message.content.startswith('https://'):
-                links.append(message.content)
+            elif 'https://' in message.content:
+                just_link = f"https://{message.content.split('https://')[1]}"
+                links.append(just_link)
 
         links_str = '\n'.join(links)
         await ctx.send(f'```{links_str}```')
