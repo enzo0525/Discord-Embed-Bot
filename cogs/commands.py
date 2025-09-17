@@ -10,7 +10,7 @@ class Commands(commands.Cog):
 
         links = []
         channel = ctx.channel
-        async for message in channel.history(limit=100):
+        async for message in channel.history():
             if message.author == self.bot.user:
                 continue
             elif message.content.startswith('https://'):
